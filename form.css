@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to right, #4484f3, #b13d8b);
+}
+
+/*Styling nav bar*/
+nav {
+    /*border: 3px solid;*/
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 2%;
+    height: 35px;
+}
+
+.imglogo {
+    /*border: 1px solid white;*/
+    margin-top: 2px;
+    margin-right: auto;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    /* 5px leftside, 25px rightside */
+}
+
+
+.navlinks {
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: #5727c6;
+    text-decoration: none;
+    /*font-weight: 300;*/
+    font-size: 20px;
+}
+
+.navlinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #5727c6;
+    display: block;
+    margin: auto;
+    transition: .2s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+.header {
+    height: 90vh;
+}
+
+.bars-image {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    left: 200px;
+    /*background-color: transparent;*/
+}
+
+nav i.fa-solid {
+    display: none;
+}
+
+/*________________________________ STYLING PAGE FOR A SMALLER SCREEN ____________________________ */
+
+@media screen and (max-width: 700px) {
+
+    /*HEADER AND NAV-BAR*/
+    .imglogo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navlinks {
+        position: absolute;
+        background: #ffffff;
+        height: 70vh;
+        width: 250px;
+        top: 0;
+        right: 200px;
+        z-index: 2;
+        text-align: left;
+        box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+        transition: 0.5s;
+    }
+
+    .navlinks ul li {
+        display: block;
+    }
+
+    .center-text h1 {
+        font-size: 25px;
+    }
+
+    .center-text p {
+        font-size: 20px;
+    }
+
+    .book-btn {
+        padding: 0;
+    }
+
+    nav i.fa-solid {
+        display: block;
+        color: #5727c6;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .navlinks ul li {
+        padding: 30px;
+    }
+
+
+}
+
+/*Styling the Single form*/
+
+.formpage1 {
+    /*border: 3px solid purple; */
+    border-radius: 6px 6px;
+    background-color: #fff;
+    max-width: 50%;
+    height: 600px;
+    margin: 100px auto;
+    padding: 30px 20px;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    overflow: scroll;
+}
+
+/*styling the placeholder*/
+#firstname {
+    width: 400px;
+    margin-top: 5px;
+    padding: 12px 9px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: .5s;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#firstname:focus {
+    font-size: 17px;
+    transition: .5s;
+}
+
+#firstname:focus::placeholder {
+    color: #1DA1F2;
+}
+
+#session {
+    font-family: 'Montserrat', sans-serif;
+    width: 820px;
+    margin-top: 5px;
+    padding: 12px 9px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+#session:focus {
+    font-size: 17px;
+    transition: .5s;
+}
+
+#session:focus::placeholder {
+    color: #1DA1F2;
+}
+
+#scheduledtime {
+    font-family: 'Montserrat', sans-serif;
+    width: 400px;
+    margin-top: 5px;
+    padding: 12px 9px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#scheduleddate {
+    font-family: 'Montserrat', sans-serif;
+    width: 400px;
+    margin-top: 5px;
+    padding: 12px 9px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#instruments {
+    font-family: 'Montserrat', sans-serif;
+    width: 820px;
+    margin-top: 5px;
+    padding: 12px 9px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: .5s;
+    font-size: 13px;
+}
+
+#instruments:focus {
+    font-size: 17px;
+    transition: .5s;
+}
+
+#instruments:focus::placeholder {
+    color: #1DA1F2;
+}
+
+.submit {
+    width: 60%;
+    height: 60px;
+    margin-left: 20%;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    background: linear-gradient(to right, #4484f3, #b13d8b);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    /*box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%); */
+}
+
+.submit:hover {
+    background: linear-gradient(to right, #b13d8b, #4484f3);
+}
+
+/* Positioning the input boxes*/
+.fill1 {
+    /*border: 1px solid black;*/
+    width: 400px;
+    position: static;
+}
+
+
+.fill2 {
+    /*border: 1px solid black;*/
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    bottom: 66px;
+}
+
+.fill3 {
+    position: relative;
+    bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.fill4 {
+    width: 400px;
+    position: static;
+}
+
+.fill5 {
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    bottom: 70px;
+}
+
+.fill6 {
+    /*border: 1px solid black;*/
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+}
+
+
+/*vStyling the group form */
+.formpage2 {
+    /*border: 3px solid red;*/
+    border-radius: 6px 6px;
+    background-color: #fff;
+    max-width: 50%;
+    height: 600px;
+    margin: 100px auto;
+    padding: 30px 20px;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    overflow: scroll;
+}
+
+/* Positioning the input boxes*/
+.fillband {
+    /*border: 1px solid black;*/
+    width: 400px;
+    position: static;
+}
+
+
+.fillpeople {
+    /*border: 1px solid black;*/
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    bottom: 66px;
+}
+
+.fillsession {
+    position: relative;
+    bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.filldate {
+    width: 400px;
+    position: static;
+}
+
+.filltime {
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    bottom: 70px;
+}
+
+.fillinstruments {
+    /*border: 1px solid black;*/
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+}
+
+.fillvocalists {
+    /*border: 1px solid black;*/
+    margin-top: 20px;
+    position: relative;
+    bottom: 50px;
+}

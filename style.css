@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headersection {
+    height: 100vh;
+    width: 100%;
+    /*background: linear-gradient(rgba(31, 31, 31, 0.5), rgba(31, 31, 31, 0.5)), url(../Images/stub5.jpeg); */
+    background-image: linear-gradient(to right, #4484f3, #b13d8b);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+/*Styling nav bar*/
+nav {
+    /*border: 3px solid;*/
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 2%;
+    height: 35px;
+}
+
+.imglogo {
+    margin-top: 2px;
+    margin-right: auto;
+    cursor: pointer;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+}
+
+
+.navlinks {
+    /*display: flex;
+    flex-direction: row; */
+
+    /* OR you can code it as because you initially indicated flex in the nav div above*/
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: #5727c6;
+    text-decoration: none;
+    /*font-weight: 300;*/
+    font-size: 20px;
+}
+
+.navlinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #5727c6;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+
+/*:root { variables in CSS
+    //to toggle b/n Light and Dark Mode among others
+    --color-primary: #191d2b;
+    --color-white: #ffffff;
+} */
+
+
+.center-text {
+    border: 1px solid white;
+    border-radius: 10px 10px;
+    padding-bottom: 50px;
+    width: 80%;
+    position: absolute;
+    /*color: ;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-text h1 {
+    font-size: 100px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 3%;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.55);
+}
+
+.center-text p {
+    margin: 30px 0 30px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
+    /*text-shadow: 0 3px 5px rgba(0, 0, 0, 0.55);*/
+}
+
+
+
+
+/*styling the book button*/
+
+.book-btn {
+    text-align: center;
+}
+
+.book-btn a {
+    background-color: #fe8d23;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 14px 70px;
+    border-radius: 7px;
+    margin-top: 20px;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+}
+
+.book-btn a:hover {
+    background-color: #ffffff;
+    transition: .5s;
+    color: #5727c6;
+}
+
+
+nav i.fa-solid {
+    display: none;
+}
+
+/*________________________________ STYLING PAGE FOR A SMALLER SCREEN ____________________________ */
+
+@media screen and (max-width: 700px) {
+
+    /*HEADER AND NAV-BAR*/
+    .imglogo {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .navlinks {
+        position: absolute;
+        background: #ffffff;
+        height: 70vh;
+        width: 250px;
+        top: 0;
+        right: -270px;
+        z-index: 2;
+        text-align: left;
+        box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+        transition: 0.5s;
+    }
+
+    .book-btn a {
+        font-size: 20px;
+        padding: 12px 50px;
+    }
+
+    .navlinks ul li {
+        display: block;
+    }
+
+    .center-text {
+        border: 2px solid #ffffff;
+    }
+
+    .center-text h1 {
+        font-size: 40px;
+    }
+
+    .center-text p {
+        font-size: 17px;
+    }
+
+    .book-btn {
+        padding: 0;
+    }
+
+    nav i.fa-solid {
+        display: block;
+        color: #5727c6;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .navlinks ul li {
+        padding: 30px;
+    }
+
+
+}
+
+
+/*___________ Styling the MAIN SECTION on the home page__________*/
+.mainsection {
+    width: auto;
+    height: 100vh;
+}
+
+.mainsection h2 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px 20px;
+    margin: 2% 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+.row {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row h3 {
+    color: #ffffff;
+    font-size: 25px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.55);
+}
+
+.course-col1 {
+    flex-basis: 30%;
+    background-color: #fe8d23;
+    margin-bottom: 5%;
+    padding: 7px 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    transition: .5s;
+}
+
+.course-col1:hover {
+    /*slide div upwards*/
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.stubimglogo {
+    /*border: 1px solid white;*/
+    margin-top: 40px;
+    position: relative;
+    left: 40%;
+    cursor: pointer;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    /* 5px leftside, 25px rightside */
+}
+
+.course-col2 {
+    flex-basis: 30%;
+    background-color: #4284f4;
+    margin-bottom: 5%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    transition: .5s;
+}
+
+.course-col2:hover {
+    /* slide div upwards*/
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.course-col3 {
+    flex-basis: 30%;
+    background-color: #5db85b;
+    margin-bottom: 5%;
+    padding: 7px 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    transition: .5s;
+}
+
+.course-col3:hover {
+    /* slide div upwards*/
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+/*Styling the images in mainsection columns*/
+.StubImage {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.production3 {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.production2 {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+/*________ Facility button ________*/
+.facility-btn {
+    text-align: center;
+}
+
+.facility-btn a {
+    box-sizing: border-box;
+    background-color: #b23c8a;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 14px 60px;
+    border-radius: 7px;
+    margin-top: 20px;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+}
+
+.facility-btn a:hover {
+    background-color: #c5549f;
+    transition: .5s;
+    color: #ffffff;
+}
+
+
+
+/* Styling the MAIN SECTION of HOME PAGE for a smaller screen */
+@media screen and (max-width: 700px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .StubImage {
+        max-width: 445px;
+        max-height: 500px;
+    }
+
+    .production2 {
+        max-width: 445px;
+        max-height: 500px;
+    }
+}
+
+
+
+.reviews {
+    color: #ffffff;
+    height: 70vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-image: url(../Images/microphone.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.textspace {
+    background-image: linear-gradient(to right, #4484f3, #b13d8b);
+    height: 70vh;
+    width: 100%;
+}
+
+
+
+
+/*_____________ Styling the FOOTER Section _____________*/
+.footer-top {
+    height: 40vh;
+    width: 100%;
+    background-color: #2c2c2c;
+}
+
+.footer-row {
+    /*margin-top: 5rem; */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.footer-row h2 {
+    color: #e1e1e1;
+    margin-top: 3.5rem;
+}
+
+.footer-row ul {
+    margin-top: 1rem;
+}
+
+.footer-row ul li {
+    list-style: none;
+    color: #c1c1c1;
+    padding: 5px 1px;
+
+}
+
+.column1 {
+    flex-basis: 27%;
+    background: none;
+    /* margin-bottom: 5%; */
+    padding: 7px 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.column2 {
+    flex-basis: 27%;
+    background: none;
+    /* margin-bottom: 5%; */
+    padding: 7px 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.column3 {
+    flex-basis: 27%;
+    background: none;
+    /* margin-bottom: 5%; */
+    padding: 7px 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.column3 ul li a {
+    color: #c1c1c1;
+    text-decoration: none;
+}
+
+.column3 ul li a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
+
+/* Syling THE REVIEWS & FOOTER SECTION FOR A SMALLER SCREEN*/
+
+@media screen and (max-width: 700px) {
+    .reviews {
+        flex-direction: column;
+    }
+
+    .textspace {
+        flex-direction: column;
+    }
+
+    .footer-top {
+        height: 80vh;
+    }
+
+    .footer-row {
+        flex-direction: column;
+    }
+
+}
+
+/* footer bottom section with icons */
+.footer-bottom {
+    background-color: #3d3d3d;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-links {
+    flex-basis: 1;
+    text-align: left;
+    margin-left: 18%;
+}
+
+.bottom-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 15px;
+    position: relative;
+}
+
+.bottom-links ul li a {
+    color: #c1c1c1;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.bottom-links ul li a:hover {
+    color: #1da1f2;
+}
+
+#facebook {
+    background: #0235bb;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 0px;
+    padding: 7px 10px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#facebook:hover {
+    background: #0235bb;
+    color: #ffffff;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+#twitter {
+    background: #1da1f2;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 0px;
+    padding: 7px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#twitter:hover {
+    background: #1DA1F2;
+    color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+#instagram {
+    background-image: linear-gradient(to top right, #f0cd01, #f81605, #9548c2);
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 0;
+    padding: 7px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#instagram:hover {
+    background-image: linear-gradient(to top right, #f0cd01, #f81605, #9548c2);
+    color: #ffffff;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

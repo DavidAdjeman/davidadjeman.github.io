@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Adjeman">
+    <meta name="keywords" content="Studio + Hub + Accra + Music">
+    <meta name="Description" content="Music studio website">
+
+    <title>Book a session | The Stub</title>
+
+    <!--Linking the CSS stylesheet to this page-->
+    <link rel="stylesheet" href="CSS/form.css" type="text/css">
+
+    <!--Importing font style from google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!--Linking font awesome to the webpage-->
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+
+    <!--Adding FONT AWESOME 5 to the webpage-->
+    <script src="https://kit.fontawesome.com/0663611bf6.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../Studio Website Project - IPMC/Images/StublogoGreen.ico">
+
+</head>
+
+
+
+<body>
+    <!--Navigation Bar-->
+    <nav>
+
+        <img class="imglogo" src="../Studio Website Project - IPMC/Images/stubLogo.jpeg" alt="StubLogoimg">
+
+
+        <div class="navlinks" id="navLinks">
+
+            <i class="fa-solid fa-rectangle-xmark fa-xl" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">Facilities</a></li>
+                <li><a href="Blogs.html">Blog</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+
+        </div>
+
+        <i class="fa-solid fa-bars fa-lg" onclick="showMenu()"></i>
+    </nav>
+
+
+
+    <div class="header">
+
+        <!--The form page for Single Person Booking-->
+        <div class="formpage1">
+
+            <h1>Single Session</h1> <br>
+            <form>
+                <div class="fill1">
+                    <span>FIRST NAME</span> <br>
+                    <input type="text" name="name" id="firstname" placeholder="Firstname">
+
+                    <!-- TO DO: use the input attribute in the CSS of this page. Makes it easier!-->
+
+                </div>
+
+                <div class="fill2">
+                    <span>LAST NAME</span> <br>
+                    <input type="text" name="name" id="firstname" placeholder="Lastname">
+
+                </div>
+
+                <br>
+
+                <div class="fill3">
+                    <span>WHAT KIND OF SESSION WOULD YOU LIKE TO HAVE? (Rehearsal | Recording | Podcast | Use of
+                        space)</span> <br>
+                    <input type="text" id="session" placeholder="Type of Session">
+
+                </div>
+
+                <br>
+
+                <div class="fill4">
+                    <label for="Date">SCHEDULED DATE</label> <br>
+                    <input type="date" id="scheduleddate">
+
+                </div>
+
+
+                <div class="fill5">
+                    <label for="time">SCHEDULED TIME</label> <br>
+                    <input type="time" id="scheduledtime">
+
+                </div>
+                <br>
+
+                <div class="fill6">
+                    <label for="Instruments">INSTRUMENTS TO BE USED </label> <br>
+                    <input type="text" id="instruments" placeholder="Instruments">
+                </div>
+                <br>
+
+                <input type="submit" value="Submit" class="submit">
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="main">
+
+        <!--The formpage for group booking-->
+        <div class="formpage2">
+            <h1>Group Session</h1> <br>
+
+            <form>
+                <div class="fillband">
+                    <label for="Name of Band">NAME OF YOUR BAND</label> <br>
+                    <input type="text" name="name" id="firstname" placeholder="Bandname">
+                </div>
+
+
+                <div class="fillpeople">
+                    <label for="">NUMBER OF PEOPLE</label> <br>
+                    <input type="text" name="" id="firstname" placeholder="Number of People">
+
+                </div>
+
+                <br>
+
+                <div class="fillsession">
+                    <span>TYPE OF SESSION (Rehearsal | Recording | Podcast | Use of space)</span> <br>
+                    <input type="text" id="session" placeholder="Type of Session">
+                </div>
+
+                <br>
+
+                <div class="filldate">
+                    <label for="Date">SCHEDULED DATE</label> <br>
+                    <input type="date" id="scheduleddate">
+                </div>
+
+                <div class="filltime">
+                    <label for="time">SCHEDULED TIME</label> <br>
+                    <input type="time" id="scheduledtime">
+                </div>
+
+                <br>
+
+                <div class="fillinstruments">
+                    <label for="Instruments">INSTRUMENTS TO BE USED </label> <br>
+                    <input type="text" id="instruments" placeholder="Instruments">
+                </div>
+
+                <br>
+
+                <div class="fillvocalists">
+                    <label for="">NUMBER OF VOCALISTS (Microphones required)</label> <br>
+                    <input type="text" id="instruments" placeholder="Number of Vocalists">
+                    <br>
+                </div>
+
+                <input type="submit" value="Submit" class="submit">
+            </form>
+
+        </div>
+    </div>
+
+
+    <br>
+    <hr>
+
+
+
+
+
+    <!-- Linking and adding JAVASCRIPT To home page-->
+    <script src="../Studio Website Project - IPMC/Javascript/form.js"></script>
+
+
+</body>
+
+</html>
